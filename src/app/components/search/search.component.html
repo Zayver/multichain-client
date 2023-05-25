@@ -1,0 +1,57 @@
+<p-toast></p-toast>
+<div class="container">
+    <p-card header="Búsqueda de un NFT en el sistema" subheader="" [style]="{ width: '50vw'}">
+        <p-divider></p-divider>
+
+        <div class="search-container">
+
+            <span class="p-input-icon-left">
+                <i class="pi pi-search"></i>
+                <input type="text" pInputText [(ngModel)]="search" />
+            </span>
+
+            <p-button type="submit" [disabled]="search === ''" styleClass="p-button-success" label="Buscar"
+                (onClick)="this.searchAction()"></p-button>
+
+
+        </div>
+
+        <div class="info-container" *ngIf="id.cc !== 0">
+            <div class="info-item">
+                <h2>Cédula</h2>
+                <h2>{{this.id.cc}}</h2>
+            </div>
+            <p-divider></p-divider>
+            <div class="info-item">
+                <h2>Primer nombre</h2>
+                <h2>{{this.id.first_name}}</h2>
+            </div>
+            <p-divider></p-divider>
+            <div class="info-item">
+                <h2>Segundo nombre</h2>
+                <h2>{{this.id.second_name}}</h2>
+            </div>
+            <p-divider></p-divider>
+            <div class="info-item">
+                <h2>Primer apellido</h2>
+                <h2>{{this.id.first_surname}}</h2>
+            </div>
+            <p-divider></p-divider>
+            <div class="info-item">
+                <h2>Segundo apellido</h2>
+                <h2>{{this.id.second_surname}}</h2>
+            </div>
+            <p-divider></p-divider>
+            <div class="info-item">
+                <h2>Fecha de nacimiento</h2>
+                <h2>{{this.id.birthday}}</h2>
+            </div>
+            <p-divider></p-divider>
+            <div class="photo-item">
+                <h2>Foto</h2>
+                <img [src]="id.picture" width="150" alt="No picture" />
+            </div>
+        </div>
+
+    </p-card>
+</div>

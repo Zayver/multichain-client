@@ -1,0 +1,33 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 30vh;
+    padding-right: 30vh;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    padding-top: 20px;
+}
+p-button{
+    align-self: center;
+    justify-self: center;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .form-item{
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+}

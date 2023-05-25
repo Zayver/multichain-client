@@ -1,0 +1,58 @@
+<p-toast></p-toast>
+<div class="container">
+
+    <p-card header="Creación de una transacción NFT en el Sistema" subheader="">
+        <p-divider></p-divider>
+        
+        <div class="content-container">
+
+            <form name="tokenCreateForm" #tokenCreateForm="ngForm" (ngSubmit)="submit()">
+
+                <div class="form-container">
+
+                    <div class="form-item">
+                        <label htmlFor="cc">CC</label>
+                        <input pInputText id="cc" [(ngModel)]="id.cc" name="CC" required #cc="ngModel" />
+                    </div>
+
+                    <div class="form-item">
+                        <label htmlFor="first_name">Primer Nombre</label>
+                        <input pInputText id="first_name" [(ngModel)]="id.first_name" name="first_name" required #first_name="ngModel" />
+                    </div>
+
+                    <div class="form-item">
+                        <label htmlFor="second_name">Segundo Nombre</label>
+                        <input pInputText id="second_name" [(ngModel)]="id.second_name" name="second_name" #second_name="ngModel" />
+                    </div>
+
+                    <div class="form-item">
+                        <label htmlFor="first_surname">Primer Apellido</label>
+                        <input pInputText id="first_surname" [(ngModel)]="id.first_surname" name="first_surname" required #first_surname="ngModel" />
+                    </div>
+
+                    <div class="form-item">
+                        <label htmlFor="second_surname">Segundo Apellido</label>
+                        <input pInputText id="second_surname" [(ngModel)]="id.second_surname" name="second_surname" required #second_surname="ngModel" />
+                    </div>
+
+                    <div class="form-item">
+                        <label htmlFor="birthday">Fecha de nacimiento</label>
+                        <input pInputText id="birthday" [(ngModel)]="id.birthday" name="birthday" required #birthday="ngModel" />
+                    </div>
+
+                    <div class="form-item">
+                        <label htmlFor="picture">Foto</label>
+                        <input pInputText id="picture" [(ngModel)]="id.picture" name="picture" required #picture="ngModel" />
+                    </div>
+
+                    <p-divider></p-divider>
+
+                    <p-button type="submit" [disabled]="!tokenCreateForm.form.valid" styleClass="p-button-success" label="Enviar"></p-button>
+
+                </div>
+            </form>
+        </div>
+
+        
+    </p-card>
+</div>
